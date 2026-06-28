@@ -50,9 +50,9 @@ const Hero = () => {
             <div className="right_content">
                 <div className="profile">
                     <img src={profileImg}/>
-
-                    
                 </div>
+                <div className="box_1"><span>15+</span> <br />Projects</div>
+                <div className="box_2"> <span></span> Available for work</div>
             </div>
         </div>
     </section>

@@ -169,78 +169,78 @@
   transition: 0.25s ease-in;
 }
 
-.badge:hover{
+.badge:hover {
   background-color: aliceblue;
   color: #000306;
   transform: scale(0.95);
 }
 
-.tag_line{
+.tag_line {
   text-align: left;
   cursor: pointer;
   user-select: none;
   width: 75%;
 }
-.tag_line h1{
+.tag_line h1 {
   font-size: 3rem;
- 
+
   font-weight: 600;
 }
 
-.text1{
-    color: rgb(86, 136, 231)
+.text1 {
+  color: rgb(86, 136, 231);
 }
 
-.text2{
+.text2 {
   font-family: "Playfair Display", serif;
   font-style: italic;
 }
-.intro{
+.intro {
   font-size: 1rem;
   color: rgb(197, 197, 197);
 }
 
-.contact_btns{
+.contact_btns {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 1rem;
 }
-.contact_btn{
-  background-color: rgb(31, 99, 224);;
+.contact_btn {
+  background-color: rgb(31, 99, 224);
   color: white;
   border-radius: 2rem;
   padding: 1rem 1.5rem;
-  transition:  0.25s ease-in;
+  transition: 0.25s ease-in;
 }
 
-.contact_btn i{
+.contact_btn i {
   font-weight: 800;
   transform: rotate(-90deg);
 }
 
-.contact_btn:hover{
+.contact_btn:hover {
   background-color: white;
   color: #000306;
 }
 
-.contact_btn:hover .contact_btn i{
- transform: rotate(0DEG);
+.contact_btn:hover .contact_btn i {
+  transform: rotate(0deg);
 }
 
-.resume_btn{
-    background-color: rgb(3, 14, 35);;
+.resume_btn {
+  background-color: rgb(3, 14, 35);
   color: white;
   border-radius: 2rem;
   padding: 1rem 1.5rem;
-  transition:  0.25s ease-in;
+  transition: 0.25s ease-in;
 }
-.resume_btn:hover{
-  border: 1 solid  rgb(31, 99, 224);;
+.resume_btn:hover {
+  border: 1 solid rgb(31, 99, 224);
 }
 
-.right_content{
-    width: 40%;
+.right_content {
+  width: 40%;
   /* border: 2px solid white; */
   display: flex;
   padding: 2rem;
@@ -248,9 +248,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
 }
 
-.profile{
+.profile {
   width: 25rem;
   height: 25rem;
   box-shadow: rgba(11, 63, 121, 0.35) 0px 5px 15px;
@@ -259,30 +260,93 @@
   object-position: center;
   object-fit: cover;
   overflow: hidden;
-  animation: floating 5s infinite;
+  animation: floating 10s infinite;
 }
-.profile img{
+.profile img {
   width: 100%;
-  
 }
 
-.profile:hover{
+.profile:hover {
   transform: scale(85%);
   box-shadow: rgba(11, 63, 121, 0.35) 0px 5px 25px;
 }
 
+.box_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 0.75rem 0.75rem;
+  /* padding: 1rem 0.5rem; */
+  backdrop-filter: blur(21px) saturate(129%);
+  -webkit-backdrop-filter: blur(21px) saturate(129%);
+  background-color: rgba(3, 18, 33, 0.56);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  transition: 0.25s ease-in;
+  z-index: 10;
+  animation: floating 4s infinite;
+  
+}
+.box_1 span{
+    color: rgb(86, 136, 231);
+    font-size: 2rem;
+}
+.box_2{
+     position: absolute;
+  top: 90%;
+  left: 60%;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.75rem;
+  /* padding: 1rem 0.5rem; */
+  backdrop-filter: blur(21px) saturate(129%);
+  -webkit-backdrop-filter: blur(21px) saturate(129%);
+  background-color: rgba(3, 18, 33, 0.56);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  transition: 0.25s ease-in;
+  z-index: 10;
+  animation: floating 4s infinite;
+}
+.box_2 span{
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  background-color: rgb(86, 136, 231) ;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%{
+    opacity: 0%;
+  }
+  50%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+  }
+}
 
 @keyframes floating {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px );
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
 }
