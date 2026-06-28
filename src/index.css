@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Style+Script&display=swap');
+@import "tailwindcss";
+
+
+@theme{
+   --color-background: #0f1418;
+    --color-foreground: #f0f2f5;
+    --color-card: #141a1f;
+    --color-primary: #20b2a6;
+    --color-primary-foreground: #ffffff;
+    --color-secondary: #1f2830;
+    --color-secondary-foreground: #28b2a6;
+    --color-muted: #252e37;
+    --color-muted-foreground: #7a8491;
+    --color-borders: #242a32;
+    --radius: 0.75rem;
+    --color-highlight: #f5a623;
+    --color-surface: #1a2329;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+  body{
+    background-color: rgb(0, 3, 6);
+    color: var(--color-foreground);
+    font-family: "Inter", sans-serif;
+  }
+  .font-serif{
+     font-family: "Playfair Display", serif;
+  }
+
+  a{
+    text-decoration: none;
+    color: var(--color-foreground);
+  }
