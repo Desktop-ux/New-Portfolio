@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   overflow: hidden;
   background: #000306;
 }
@@ -349,4 +349,81 @@
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px);
   }
+}
+
+.technologies{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid pink; */
+}
+.technologies p {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  opacity: 70%;
+  font-weight: 600;
+  color: rgb(141, 161, 180);
+}
+
+.skills {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.skills_list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: max-content;
+  cursor: pointer;
+  user-select: none;
+  animation: marquee 25s linear infinite;
+}
+
+.skill {
+  flex-shrink: 0;
+  color: #707171;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.5s ease;
+}
+.skill:hover{
+  color: aliceblue;
+}
+.skills_list:hover{
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.skills::before,
+.skills::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 500px;
+  height: 100%;
+  z-index: 2;
+}
+
+.skills::before {
+  left: 0;
+  background: linear-gradient(to right, #000306, transparent);
+}
+
+.skills::after {
+  right: 0;
+  background: linear-gradient(to left, #000306, transparent);
 }

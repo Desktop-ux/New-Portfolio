@@ -1,9 +1,9 @@
 
 import Navbar from './layout/Navbar'
 import Hero from './Sections/Hero'
-import About from  './Sections/About'
-import Experience from './Sections/Experience'
-import Projects from './Sections/Projects'
+// import About from  './Sections/About'
+// import Experience from './Sections/Experience'
+// import Projects from './Sections/Projects'
 
 const App = () => {
   return (
@@ -12,9 +12,6 @@ const App = () => {
       <main>
         <Hero/>
           
-          <About/>
-          <Experience/>
-          <Projects/>
       </main>
     </div>
   )

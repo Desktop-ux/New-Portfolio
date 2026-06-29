@@ -4,6 +4,9 @@ import heroImg from '../assets/background.png'
 import profileImg from '../assets/profile_img.jpg'
 
 const Hero = () => {
+    const Skills = [
+        "React", "Node.js", "Express.js", "MongoDB", "JavaScript", "TypeScript", "MySQL", "HTML5", "CSS3", "Git", "GitHub", "RESTful APIs", "React Native", "Material-UI", "GSAP", "Socket.IO", "OOPs", "System Design", "React", "Node.js", "Express.js", "MongoDB", "JavaScript", "TypeScript", "MySQL", "HTML5", "CSS3", "Git", "GitHub", "RESTful APIs", "React Native", "Material-UI", "GSAP", "Socket.IO", "OOPs", "System Design"
+    ]
 
     const dots = useMemo(
         () =>
@@ -49,10 +52,23 @@ const Hero = () => {
             </div>
             <div className="right_content">
                 <div className="profile">
-                    <img src={profileImg}/>
+                    <img src={profileImg} />
                 </div>
                 <div className="box_1"><span>15+</span> <br />Projects</div>
                 <div className="box_2"> <span></span> Available for work</div>
+            </div>
+
+        </div>
+        <div className="technologies">
+            <p>Technologies I work with</p>
+            <div className="skills">
+                <div className="skills_list">
+                    {[...Skills, ...Skills].map((skill, index) => (
+                        <span className="skill" key={index}>
+                            {skill}
+                        </span>
+                    ))}
+                </div>
             </div>
         </div>
     </section>
